@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 MAINTAINER Anil <anilsalunke110@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils && \
- apt-get -y install supervisor subversion wget curl git apache2 zip unzip php7.1 php7.1-curl  php7.1-gd php7.1-json php7.1-mbstring php7.1-mysqli && \
+ apt-get -y install supervisor subversion wget curl git apache2 zip unzip php7.0 php7.0-curl  php7.0-gd php7.0-json php7.0-mbstring php7.0-mysqli && \
  echo "ServerName localhost" >> /etc/apache2/apache2.conf && echo "vm.nr_hugepages=128" >> /etc/sysctl.conf && rm /var/www/html/index.html
 ADD uploads/start-apache2.sh /start-apache2.sh
 ADD uploads/run.sh /run.sh
